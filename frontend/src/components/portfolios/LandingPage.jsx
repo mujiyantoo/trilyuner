@@ -32,6 +32,17 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white" style={{ fontFamily: 'var(--font-sans)' }}>
+      {/* Header - Only on Landing Page */}
+      <div className="top-nav-overlay">
+        <div className="nav-logo">
+          <img src="/logo.png" alt="78IslandTea Logo" />
+        </div>
+        <div className="nav-brand">
+          <Sparkles className="nav-brand-icon" />
+          <span className="nav-brand-text">78Island Tea</span>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
         {/* Animated background grid */}

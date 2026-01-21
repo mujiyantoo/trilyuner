@@ -19,34 +19,26 @@ import MicroInteractions from "./components/portfolios/MicroInteractions";
 function App() {
   return (
     <div className="App">
-      <div className="top-nav-overlay">
-        <div className="nav-logo">
-          <img src="/logo.png" alt="78IslandTea Logo" />
-        </div>
-        <div className="nav-brand">
-          <Sparkles className="nav-brand-icon" />
-          <span className="nav-brand-text">78Island Tea</span>
-        </div>
-      </div>
-      <BrowserRouter>
-        <Routes>
-          {/* Landing Page - Showcase all 9 concepts */}
-          <Route path="/" element={<LandingPage />} />
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            {/* Landing Page - Showcase all 9 concepts */}
+            <Route path="/" element={<LandingPage />} />
 
-          {/* Individual Portfolio Concepts */}
-          <Route path="/bento-grid" element={<BentoGrid />} />
-          <Route path="/kinetic-typography" element={<KineticTypography />} />
-          <Route path="/organic-shapes" element={<OrganicShapes />} />
-          <Route path="/glassmorphism" element={<Glassmorphism />} />
-          <Route path="/dark-mode" element={<DarkMode />} />
-          <Route path="/immersive-3d" element={<Immersive3D />} />
-          <Route path="/scroll-storytelling" element={<ScrollStorytelling />} />
-          <Route path="/hand-drawn" element={<HandDrawn />} />
-          <Route path="/micro-interactions" element={<MicroInteractions />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+            {/* Individual Portfolio Concepts */}
+            <Route path="/bento-grid" element={<BentoGrid />} />
+            <Route path="/kinetic-typography" element={<KineticTypography />} />
+            <Route path="/organic-shapes" element={<OrganicShapes />} />
+            <Route path="/glassmorphism" element={<Glassmorphism />} />
+            <Route path="/dark-mode" element={<DarkMode />} />
+            <Route path="/immersive-3d" element={<Immersive3D />} />
+            <Route path="/scroll-storytelling" element={<ScrollStorytelling />} />
+            <Route path="/hand-drawn" element={<HandDrawn />} />
+            <Route path="/micro-interactions" element={<MicroInteractions />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+      );
 }
 
-export default App;
+      export default App;
