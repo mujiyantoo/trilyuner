@@ -23,7 +23,7 @@ function App() {
           <img src="/logo.png" alt="78IslandTea" />
         </div>
         <div className="nav-cta">
-          <a href="mailto:muj582@gmail.com" className="cta-button" style={{ backgroundColor: 'transparent', color: '#ffffff', border: '1px solid #ffffff' }}>
+          <a href="mailto:muj582@gmail.com" className="cta-button" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', border: '1px solid #ffffff' }}>
             Email Order
           </a>
           <a href="https://wa.me/6282121856399" target="_blank" rel="noopener noreferrer" className="cta-button">
