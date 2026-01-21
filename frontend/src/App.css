@@ -53,17 +53,21 @@
 .nav-logo {
     pointer-events: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    /* Align to top */
     /* Crop bottom text of logo */
-    height: 65px;
+    height: 52px;
+    /* reduced height to cut off text */
     overflow: hidden;
 }
 
 .nav-logo img {
-    height: 80px;
+    height: 75px;
+    /* Slight reduce original height to keep proportions */
     width: auto;
     object-fit: cover;
-    object-position: 0 8px;
+    object-position: top;
+    /* Align top strictly to crop bottom */
     /* Invert colors to make black text white, rotate hue to restore approximate original colors */
     filter: invert(1) hue-rotate(180deg);
 }
