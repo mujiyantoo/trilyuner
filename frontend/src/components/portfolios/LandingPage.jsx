@@ -244,13 +244,15 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-[#1C1C1C] rounded-3xl p-8 md:p-12 border border-neutral-800 shadow-2xl">
-            <form className="space-y-8">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-neutral-400 block ml-1">Your Name</label>
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    required
                     placeholder="John Doe"
                     className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600"
                   />
@@ -260,6 +262,8 @@ const LandingPage = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     placeholder="john@example.com"
                     className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600"
                   />
@@ -271,6 +275,7 @@ const LandingPage = () => {
                 <input
                   type="text"
                   id="project-type"
+                  name="project_type"
                   placeholder="e.g., Mobile App, Website Redesign, Design System"
                   className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600"
                 />
@@ -280,6 +285,8 @@ const LandingPage = () => {
                 <label htmlFor="message" className="text-sm font-medium text-neutral-400 block ml-1">Tell me about your project</label>
                 <textarea
                   id="message"
+                  name="message"
+                  required
                   rows={4}
                   placeholder="Describe your project, goals, and timeline..."
                   className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600 resize-none"
