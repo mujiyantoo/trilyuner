@@ -89,3 +89,25 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+    .nav-logo img {
+        height: 50px;
+        /* Much smaller on mobile */
+    }
+
+    .top-nav-overlay {
+        padding: 16px 20px;
+        flex-direction: row;
+        /* Keep row but maybe adjust if needed */
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .nav-cta {
+        gap: 8px;
+    }
+}

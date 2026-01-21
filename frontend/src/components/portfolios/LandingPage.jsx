@@ -122,10 +122,10 @@ const LandingPage = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs text-neutral-500 uppercase tracking-wider">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-neutral-700 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-white rounded-full animate-pulse" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce scale-75 md:scale-100 origin-bottom opacity-70 md:opacity-100">
+          <span className="text-[10px] md:text-xs text-neutral-500 uppercase tracking-wider">Scroll to explore</span>
+          <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-neutral-700 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-1.5 md:h-2 bg-white rounded-full animate-pulse" />
           </div>
         </div>
       </section>
