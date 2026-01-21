@@ -57,7 +57,7 @@
 }
 
 .nav-logo img {
-    height: 160px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     /* Invert colors to make black text white, rotate hue to restore approximate original colors */
