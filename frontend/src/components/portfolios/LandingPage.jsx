@@ -244,7 +244,7 @@ const LandingPage = () => {
           </div>
 
           <div className="bg-[#1C1C1C] rounded-3xl p-8 md:p-12 border border-neutral-800 shadow-2xl">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="space-y-8">
+            <form action="https://formspree.io/f/xlggovye" method="POST" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-neutral-400 block ml-1">Your Name</label>
