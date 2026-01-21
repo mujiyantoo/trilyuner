@@ -18,11 +18,21 @@ import MicroInteractions from "./components/portfolios/MicroInteractions";
 function App() {
   return (
     <div className="App">
+      <div className="top-nav-overlay">
+        <div className="nav-logo">
+          <img src="/logo.png" alt="78IslandTea" />
+        </div>
+        <div className="nav-cta">
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="cta-button">
+            Pesan Design Web
+          </a>
+        </div>
+      </div>
       <BrowserRouter>
         <Routes>
           {/* Landing Page - Showcase all 9 concepts */}
           <Route path="/" element={<LandingPage />} />
-          
+
           {/* Individual Portfolio Concepts */}
           <Route path="/bento-grid" element={<BentoGrid />} />
           <Route path="/kinetic-typography" element={<KineticTypography />} />
