@@ -29,10 +29,10 @@ const GlobalNav = ({ variant = 'light' }) => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          {/* Logo removed per user request */}
-          <div className="flex items-center gap-2 font-bold text-xl opacity-0 pointer-events-none">
-            {/* Hidden placeholder to keep layout if needed, or just remove */}
-          </div>
+          <Link to="/" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition-opacity">
+            <Sparkles className="w-6 h-6" />
+            <span>78Island Tea</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -65,8 +65,8 @@ const GlobalNav = ({ variant = 'light' }) => {
                         to={concept.path}
                         onClick={() => setIsDropdownOpen(false)}
                         className={`block px-4 py-3 transition-colors ${location.pathname === concept.path
-                            ? isDark ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'
-                            : isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-50'
+                          ? isDark ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'
+                          : isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-50'
                           }`}
                       >
                         <p className="font-medium text-sm">{concept.trend}</p>
