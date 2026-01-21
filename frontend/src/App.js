@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import "./styles/portfolios.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Sparkles } from 'lucide-react';
 
 // Portfolio Components
 import LandingPage from "./components/portfolios/LandingPage";
@@ -20,10 +21,11 @@ function App() {
     <div className="App">
       <div className="top-nav-overlay">
         <div className="nav-logo">
-          <img src="/logo.png" alt="78IslandTea" />
+          <img src="/logo.png" alt="78IslandTea Logo" />
         </div>
-        <div className="nav-cta">
-          {/* CTAs moved to bottom */}
+        <div className="nav-brand">
+          <Sparkles className="nav-brand-icon" />
+          <span className="nav-brand-text">78Island Tea</span>
         </div>
       </div>
       <BrowserRouter>
