@@ -34,12 +34,14 @@ const LandingPage = () => {
     <div className="min-h-screen bg-neutral-950 text-white" style={{ fontFamily: 'var(--font-sans)' }}>
       {/* Header - Only on Landing Page */}
       <div className="top-nav-overlay">
-        <div className="nav-logo">
-          <img src="/logo.png" alt="78IslandTea Logo" />
-        </div>
-        <div className="nav-brand">
-          <Sparkles className="nav-brand-icon" />
-          <span className="nav-brand-text">78Island Tea</span>
+        <div className="flex items-center gap-4">
+          <div className="nav-logo">
+            <img src="/logo.png" alt="78IslandTea Logo" />
+          </div>
+          <div className="nav-brand">
+            <Sparkles className="nav-brand-icon" />
+            <span className="nav-brand-text">78Island Tea</span>
+          </div>
         </div>
       </div>
 
