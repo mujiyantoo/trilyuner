@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { designConcepts, portfolioOwner } from '../../data/mockData';
-import { ArrowRight, Sparkles, Grid3X3, Type, Circle, Layers, Moon, Box, BookOpen, Pencil, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, Grid3X3, Type, Circle, Layers, Moon, Box, BookOpen, Pencil, Zap, Send } from 'lucide-react';
 import { Button } from '../ui/button';
 import '../../styles/portfolios.css';
 
@@ -36,7 +36,7 @@ const LandingPage = () => {
       <section className="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
         {/* Animated background grid */}
         <div className="absolute inset-0 opacity-20">
-          <div 
+          <div
             className="absolute inset-0"
             style={{
               backgroundImage: `
@@ -47,18 +47,18 @@ const LandingPage = () => {
             }}
           />
         </div>
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-1/4 -left-40 w-80 h-80 bg-indigo-500/30 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl" />
-        
+
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-neutral-300 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-amber-400" />
             <span>9 Design Trends for 2025/2026</span>
           </div>
-          
-          <h1 
+
+          <h1
             className="text-display-xl font-bold mb-8 animate-fade-in-up"
             style={{ fontFamily: 'var(--font-display)', animationDelay: '100ms' }}
           >
@@ -68,20 +68,20 @@ const LandingPage = () => {
               Trends Showcase
             </span>
           </h1>
-          
-          <p 
+
+          <p
             className="text-xl text-neutral-400 max-w-2xl mx-auto mb-12 animate-fade-in-up"
             style={{ animationDelay: '200ms' }}
           >
-            Explore 9 unique UI/UX portfolio concepts, each demonstrating a cutting-edge web design trend. 
+            Explore 9 unique UI/UX portfolio concepts, each demonstrating a cutting-edge web design trend.
             Perfect for standing out on platforms like Upwork.
           </p>
-          
-          <div 
+
+          <div
             className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up"
             style={{ animationDelay: '300ms' }}
           >
-            <Button 
+            <Button
               asChild
               className="bg-white text-neutral-900 hover:bg-neutral-100 px-8 py-6 text-base"
             >
@@ -90,16 +90,16 @@ const LandingPage = () => {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-neutral-700 text-white hover:bg-white/10 px-8 py-6 text-base"
             >
               About This Project
             </Button>
           </div>
-          
+
           {/* Stats */}
-          <div 
+          <div
             className="grid grid-cols-3 gap-8 mt-20 max-w-xl mx-auto animate-fade-in-up"
             style={{ animationDelay: '400ms' }}
           >
@@ -109,7 +109,7 @@ const LandingPage = () => {
               { value: '100%', label: 'Responsive' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <span 
+                <span
                   className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
@@ -120,7 +120,7 @@ const LandingPage = () => {
             ))}
           </div>
         </div>
-        
+
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
           <span className="text-xs text-neutral-500 uppercase tracking-wider">Scroll to explore</span>
@@ -134,7 +134,7 @@ const LandingPage = () => {
       <section id="concepts" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 
+            <h2
               className="text-display-md font-bold mb-4"
               style={{ fontFamily: 'var(--font-display)' }}
             >
@@ -144,12 +144,12 @@ const LandingPage = () => {
               Each portfolio demonstrates a unique design trend. Click to explore the full experience.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {designConcepts.map((concept, index) => {
               const Icon = conceptIcons[concept.id];
               const color = conceptColors[concept.id];
-              
+
               return (
                 <Link
                   key={concept.id}
@@ -158,36 +158,36 @@ const LandingPage = () => {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {/* Glow effect on hover */}
-                  <div 
+                  <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    style={{ 
-                      background: `radial-gradient(circle at 50% 50%, ${color}20, transparent 70%)` 
+                    style={{
+                      background: `radial-gradient(circle at 50% 50%, ${color}20, transparent 70%)`
                     }}
                   />
-                  
+
                   <div className="relative z-10">
-                    <div 
+                    <div
                       className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110"
                       style={{ backgroundColor: `${color}20` }}
                     >
                       <Icon className="w-7 h-7" style={{ color }} />
                     </div>
-                    
-                    <span 
+
+                    <span
                       className="text-xs uppercase tracking-wider mb-2 block"
                       style={{ color }}
                     >
                       Trend #{String(index + 1).padStart(2, '0')}
                     </span>
-                    
+
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
                       {concept.trend}
                     </h3>
-                    
+
                     <p className="text-neutral-400 text-sm mb-6">
                       {concept.description}
                     </p>
-                    
+
                     <div className="flex items-center gap-2 text-sm font-medium group-hover:text-white transition-colors" style={{ color }}>
                       Explore Design
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -203,19 +203,19 @@ const LandingPage = () => {
       {/* About Section */}
       <section className="py-32 px-6 bg-neutral-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 
+          <h2
             className="text-display-md font-bold mb-8"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             About This <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Project</span>
           </h2>
-          
+
           <p className="text-xl text-neutral-400 leading-relaxed mb-8">
-            This showcase features 9 distinct portfolio concepts, each highlighting a leading web design trend for 2025/2026. 
-            From Bento Grid layouts to Micro-interactions, each design is crafted to help UI/UX designers stand out 
+            This showcase features 9 distinct portfolio concepts, each highlighting a leading web design trend for 2025/2026.
+            From Bento Grid layouts to Micro-interactions, each design is crafted to help UI/UX designers stand out
             on freelancing platforms like Upwork.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
             {[
               { title: 'Modern Trends', description: 'Each portfolio showcases cutting-edge design patterns' },
@@ -231,27 +231,72 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 
-            className="text-display-md font-bold mb-6"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            Ready to <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Explore?</span>
-          </h2>
-          <p className="text-neutral-400 text-lg mb-8">
-            Pick any design concept to see it in action. Each portfolio is a complete, standalone experience.
-          </p>
-          <Button 
-            asChild
-            className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:opacity-90 px-8 py-6 text-base border-0"
-          >
-            <a href="#concepts">
-              Browse All 9 Concepts
-              <Sparkles className="ml-2 w-4 h-4" />
-            </a>
-          </Button>
+      {/* Contact Form Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2
+              className="text-2xl md:text-3xl font-medium text-neutral-200 mb-6"
+              style={{ fontFamily: 'var(--font-sans)' }}
+            >
+              Have a project in mind? Let's create something extraordinary together.
+            </h2>
+          </div>
+
+          <div className="bg-[#1C1C1C] rounded-3xl p-8 md:p-12 border border-neutral-800 shadow-2xl">
+            <form className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium text-neutral-400 block ml-1">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="John Doe"
+                    className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-medium text-neutral-400 block ml-1">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="john@example.com"
+                    className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="project-type" className="text-sm font-medium text-neutral-400 block ml-1">Project Type</label>
+                <input
+                  type="text"
+                  id="project-type"
+                  placeholder="e.g., Mobile App, Website Redesign, Design System"
+                  className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-neutral-400 block ml-1">Tell me about your project</label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  placeholder="Describe your project, goals, and timeline..."
+                  className="w-full bg-[#252525] border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder:text-neutral-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all hover:border-neutral-600 resize-none"
+                />
+              </div>
+
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="bg-white text-black font-semibold rounded-lg px-8 py-3 flex items-center gap-2 hover:bg-neutral-200 transition-colors"
+                >
+                  Send Message
+                  <Send className="w-4 h-4" />
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
