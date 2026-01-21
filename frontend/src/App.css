@@ -54,20 +54,50 @@
     pointer-events: auto;
     display: flex;
     align-items: center;
+    /* Crop bottom text of logo */
+    height: 50px;
+    /* Adjust height to only show the symbol */
+    overflow: hidden;
 }
 
 .nav-logo img {
     height: 80px;
+    /* Original height */
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top;
+    /* Keep the top part (symbol), crop bottom (text) */
     /* Invert colors to make black text white, rotate hue to restore approximate original colors */
     filter: invert(1) hue-rotate(180deg);
 }
 
-.nav-cta {
-    pointer-events: auto;
+.nav-brand {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-family: var(--font-display, serif);
+    /* Fallback to serif if var not defined */
+    pointer-events: auto;
+}
+
+.nav-brand-icon {
+    width: 20px;
+    height: 20px;
+    color: #ffd700;
+    /* Gold/Amber color for sparkles */
+}
+
+.nav-brand-text {
+    font-size: 20px;
+    /* Adjust to match previous 'Portfolio Trends' size */
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Remove old nav-cta styles if no longer used, or keep for safety */
+.nav-cta {
+    display: none;
 }
 
 .cta-button {
@@ -109,5 +139,10 @@
 
     .nav-cta {
         gap: 8px;
+    }
+
+    .nav-brand-text {
+        font-size: 16px;
+        /* Smaller font on mobile */
     }
 }
