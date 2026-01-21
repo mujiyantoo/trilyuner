@@ -23,8 +23,11 @@ function App() {
           <img src="/logo.png" alt="78IslandTea" />
         </div>
         <div className="nav-cta">
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="cta-button">
-            Pesan Design Web
+          <a href="mailto:muj582@gmail.com" className="cta-button" style={{ backgroundColor: 'transparent', color: '#ffffff', border: '1px solid #ffffff' }}>
+            Email Order
+          </a>
+          <a href="https://wa.me/6282121856399" target="_blank" rel="noopener noreferrer" className="cta-button">
+            Order Web Design (WA)
           </a>
         </div>
       </div>

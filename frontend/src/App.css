@@ -28,6 +28,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -44,7 +45,8 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    pointer-events: none; /* Allow clicking through the container */
+    pointer-events: none;
+    /* Allow clicking through the container */
     box-sizing: border-box;
 }
 
@@ -58,10 +60,14 @@
     height: 48px;
     width: auto;
     object-fit: contain;
+    /* Invert colors to make black text white, rotate hue to restore approximate original colors */
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .nav-cta {
     pointer-events: auto;
+    display: flex;
+    gap: 12px;
 }
 
 .cta-button {
