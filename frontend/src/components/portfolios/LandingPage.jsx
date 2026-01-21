@@ -332,7 +332,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-indigo-400" />
-            <span className="font-semibold">Portfolio Trends 2025</span>
+            <span className="font-semibold">78Island Tea</span>
           </div>
           <p className="text-neutral-500 text-sm">
             9 Design Concepts • Built for UI/UX Designers
